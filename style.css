@@ -45,3 +45,21 @@ body{
     border-radius: 1.2rem;
     border: none;
 }
+#new-btn{
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: #fff;
+    border-radius: 1.2rem;
+    border: none;
+}
+#msg{
+    color: rgb(197, 250, 197);
+    font-size: 5vmin;
+}
+.msg-container{
+    height: 30vmin;
+}
+.hide{
+    display: none;
+}
