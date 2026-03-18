@@ -34,9 +34,11 @@ boxes.forEach((box)=>{
     box.addEventListener("click",()=>{
         if(turnO){
             box.innerText="O";
+            box.classList.add("O")
             turnO=false;
         }else{
             box.innerText="X";
+            box.classList.add("X")
             turnO=true;
         }
         box.disabled=true;
@@ -73,7 +75,9 @@ const checkWinner =()=>{
 
         if(pos1!="" && pos2!=""  && pos3!=""){
             if(pos1===pos2 && pos2===pos3){
-                console.log("winner");
+                boxes[pattern[0]].classList.add("winner");
+                boxes[pattern[1]].classList.add("winner");
+                boxes[pattern[2]].classList.add("winner");
                 showWinner(pos1);
             }
         }
@@ -84,3 +88,10 @@ const checkWinner =()=>{
 newGameBtn.addEventListener("click",resetGame);
 resetbtn.addEventListener("click",resetGame);
 
+let clickSound = new Audio("click.mp3");
+
+boxes.forEach(box => {
+    box.addEventListener("click", () => {
+        clickSound.play();
+    });
+});
