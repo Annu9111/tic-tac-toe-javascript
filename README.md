@@ -6,7 +6,7 @@ This project features smooth UI, sound effects, animations, and responsive desig
 ---
 
 ## 🚀 Live Demo
-👉 tic-tac-toe-javascript-ochre.vercel.app
+👉 https://tic-tac-toe-javascript-ochre.vercel.app/
 
 ---
 
