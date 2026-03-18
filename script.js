@@ -15,6 +15,13 @@ const winpatterns=[
     [3,4,5],
     [6,7,8]
 ];
+// box.innerText = turnO ? "O" : "X";
+// box.classList.add(turnO ? "O" : "X");
+
+
+
+
+
 const resetGame=()=>{
     turnO=true;
     enableBoxes();
@@ -46,7 +53,7 @@ const disableBoxes=()=>{
 
 const enableBoxes=()=>{
     for (let box of boxes){
-        box.disabled=False;
+        box.disabled=false;
         box.innerText="";
     }
 }
@@ -73,4 +80,7 @@ const checkWinner =()=>{
 
     }
 }
+
+newGameBtn.addEventListener("click",resetGame);
+resetbtn.addEventListener("click",resetGame);
 

@@ -5,8 +5,15 @@
 }
 
 body{
-    background-color: darkolivegreen;
+    background-color:linear-gradient(135deg, #1d3b2a, #3e7c59);
     text-align: center;
+}
+h1{
+    font-size: 3rem;
+    color: #eaffea;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #000;
+    margin-top: 20px;
 }
 
 .container{
@@ -25,6 +32,11 @@ body{
     justify-content: center;
     align-items: center;
     gap: 1.5vmin;
+    /* backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.08);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5); */
 }
 
 .box{
@@ -36,7 +48,17 @@ body{
     font-size: 8vmin;
     color: #b0413e;
     background-color: #d1f6bc;
+    transition: all 0.2s ease;
 }
+.box:hover{
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #b7ffb7;
+}
+
+.box:active{
+    transform: scale(0.95);
+}
+
 #reset-btn{
     padding: 1rem;
     font-size: 1.25rem;
@@ -58,8 +80,62 @@ body{
     font-size: 5vmin;
 }
 .msg-container{
-    height: 30vmin;
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+
 }
 .hide{
     display: none;
+}
+
+/* .box.X{
+    color:#00eaff;
+    text-shadow:0 0 10px #00eaff;
+}
+
+.box.O{
+    color:#ff6b6b;
+    text-shadow:0 0 10px #ff6b6b;
+} */
+
+.winner{
+    background:#90ee90 !important;
+    box-shadow:0 0 25px #00ff88;
+}
+
+.msg-container{
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform: scale(0.8);
+    }
+    to{
+        opacity:1;
+        transform: scale(1);
+    }
+}
+
+button{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#reset-btn, #new-btn{
+    padding:1rem 2rem;
+    font-size:1.2rem;
+    background: linear-gradient(45deg, #000, #333);
+    color:#fff;
+    border-radius:30px;
+}
+
+#reset-btn:hover, #new-btn:hover{
+    background:#00ff88;
+    color:#000;
 }
