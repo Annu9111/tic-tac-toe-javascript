@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color:linear-gradient(135deg, #1d3b2a, #3e7c59);
+    background: radial-gradient(circle at center, #1d3b2a, #000000);
     text-align: center;
 }
 h1{
@@ -92,7 +92,7 @@ h1{
     display: none;
 }
 
-/* .box.X{
+.box.X{
     color:#00eaff;
     text-shadow:0 0 10px #00eaff;
 }
@@ -100,7 +100,7 @@ h1{
 .box.O{
     color:#ff6b6b;
     text-shadow:0 0 10px #ff6b6b;
-} */
+}
 
 .winner{
     background:#90ee90 !important;
