@@ -17,7 +17,9 @@ const winpatterns = [
     [6,7,8]
 ];
 
+let winSound = new Audio("win.mp3");
 
+let drawSound = new Audio("draw.mp3");
 let clickSound = new Audio("click.mp3");
 
 const resetGame = () => {
@@ -69,6 +71,7 @@ const enableBoxes = () => {
 const showWinner = (winner) => {
     msg.innerText = `🎉 Congratulations, Winner is ${winner}`;
     msgContainer.classList.remove("hide");
+    winSound.play();
     disableBoxes();
 };
 
@@ -105,6 +108,7 @@ const checkDraw = () => {
     if (isDraw) {
         msg.innerText = "😐 It's a Draw!";
         msgContainer.classList.remove("hide");
+        drawSound.play(); 
         disableBoxes();
     }
 };
